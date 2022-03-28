@@ -39,8 +39,13 @@ public abstract class Animal {
 		this._name = name;
 	}
 
+	/**
+	 * override of equals for this abstract class
+	 *
+	 */
 	@Override
 	public boolean equals(Object obj) {
+		System.out.println("another");
 		if (obj instanceof Animal) {
 			Animal temp = (Animal) obj;
 			if (temp.get_age() == this._age && temp.get_color().equals(this._color)

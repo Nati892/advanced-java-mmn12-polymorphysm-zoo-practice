@@ -28,9 +28,14 @@ public class Turtle extends Reptile {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this.equals(obj)) {
-			if (obj instanceof Turtle) {
+
+
+		if (obj instanceof Turtle) {
+			if (((Animal) obj).get_age() == this._age && ((Animal) obj).get_color().equals(this._color)
+					&& ((Animal) obj).get_name().equals(this._name) ) {
 				return true;
+
+
 			}
 
 		}
@@ -38,7 +43,7 @@ public class Turtle extends Reptile {
 	}
 
 	@Override
-	public Object clone() throws CloneNotSupportedException {
+	public Object clone() {
 		return new Turtle(this._name, this._age, this._color);
 	}
 

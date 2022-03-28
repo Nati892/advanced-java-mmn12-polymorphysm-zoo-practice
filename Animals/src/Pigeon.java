@@ -27,16 +27,21 @@ public class Pigeon extends Bird {
 	}
 
 	@Override
-	public Object clone() throws CloneNotSupportedException {
+	public Object clone() {
 		return new Pigeon(this._name, this._age, this._color);
 	}
 
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		if (this.equals(obj)) {
-			if (obj instanceof Pigeon) {
+
+
+		if (obj instanceof Pigeon) {
+			if (((Animal) obj).get_age() == this._age && ((Animal) obj).get_color().equals(this._color)
+					&& ((Animal) obj).get_name().equals(this._name)) {
 				return true;
+
+
 			}
 
 		}
