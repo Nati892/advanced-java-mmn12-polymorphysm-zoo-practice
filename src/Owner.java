@@ -3,6 +3,12 @@ public class Owner {
     private String _name;
     private String phone_number;
 
+    /**
+     * Owner's constructor
+     *
+     * @param _name
+     * @param phone_number
+     */
     public Owner(String _name, String phone_number) {
         super();
         this._name = _name;

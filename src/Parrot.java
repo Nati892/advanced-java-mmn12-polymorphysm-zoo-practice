@@ -2,41 +2,77 @@
 public class Parrot extends Bird {
     private Owner _owner;
 
+    /**
+     * constructor for wild Parrot (owner set to null)
+     *
+     * @param name
+     * @param age
+     * @param color
+     */
     public Parrot(String name, int age, String color) {
         super(name, age, color);
         this._owner = null;
     }
 
+    /**
+     * constructor for Parrot that includes owner details
+     *
+     * @param name
+     * @param age
+     * @param color
+     * @param owner_name
+     * @param owner_phone_num
+     */
     public Parrot(String name, int age, String color, String owner_name, String owner_phone_num) {
         super(name, age, color);
         this._owner = new Owner(owner_name, owner_phone_num);
     }
 
+    /**
+     * sets a new owner for Parrot
+     *
+     * @param owner the Parrot's owner, passes by reference
+     */
     public void setOwner(Owner owner) {
         this._owner = owner;
     }
 
+    /**
+     * @return owner of Parrot by reference, returns null for wild Parrot
+     */
     public Owner getOwner() {
         return this._owner;
 
     }
 
+    /**
+     * Parrot's override for eating method
+     */
     @Override
     public void eat() {
         System.out.println("The parrot: " + this.get_name() + " is eating sunflower seeds");
     }
 
+    /**
+     * Parrot's override for sleeping method
+     */
     @Override
     public void sleep() {
         System.out.println("The parrot: " + this.get_name() + " is asleep on my shoulder");
     }
 
+    /**
+     * Parrot's override for the Bird's tweeting method
+     */
     @Override
     public void tweet() {
         // TODO Auto-generated method stub
         System.out.println("The parrot: " + this.get_name() + " Just repeated after you");
     }
 
+    /**
+     * Parrot's override for the flying method in Bird
+     */
     @Override
     public void fly() {
         // TODO Auto-generated method stub
